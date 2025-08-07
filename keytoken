@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trello Iframe Connector</title>
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  </head>
+  <body>
+    <h3>Hello from iframe!</h3>
+    <script>
+      const t = TrelloPowerUp.iframe();
+      t.card('name').then(card => {
+        document.body.innerHTML += `<p>Card Name: ${card.name}</p>`;
+      });
+    </script>
+  </body>
+</html>
